@@ -163,7 +163,7 @@ ax.axhline(K, color='black', linestyle='--', linewidth=1.5, label=f'Strike K = {
 
 ax.set_title(f"Simulation de {n_sim_plot} trajectoires du sous-jacent")
 ax.set_xlabel("Temps (années)")
-ax.set_ylabel("Prix de l'actif ($S_t$)")
+ax.set_ylabel("Prix de l'actif (St)")
 ax.grid(alpha=0.3)
 ax.legend()
 
@@ -233,7 +233,7 @@ ax2 = axes[1]
 ax2.plot(N_values[mask], abs_errors[mask], color='darkorange', marker='o', markersize=3, label=r"Erreur MC-Black-Scholes")
 
 ref = abs_errors[mask][0] * np.sqrt(N_values[mask][0] / N_values[mask])
-ax2.plot(N_values[mask], ref, color='gray', linestyle='--', label=r"Référence en $1/\\sqrt{N}$")
+ax2.plot(N_values[mask], ref, color='gray', linestyle='--', label=r"Référence en 1/√N")
 
 ax2.set_xscale('log')
 ax2.set_yscale('log')
