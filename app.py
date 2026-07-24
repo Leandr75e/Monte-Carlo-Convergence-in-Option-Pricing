@@ -230,10 +230,10 @@ ax1.grid(alpha=0.3)
 abs_errors = np.abs(prices - bs_call)
 mask = abs_errors > 0
 ax2 = axes[1]
-ax2.plot(N_values[mask], abs_errors[mask], color='darkorange', marker='o', markersize=3, label="Erreur MC-Black-Scholes")
+ax2.plot(N_values[mask], abs_errors[mask], color='darkorange', marker='o', markersize=3, label=r"Erreur MC-Black-Scholes")
 
 ref = abs_errors[mask][0] * np.sqrt(N_values[mask][0] / N_values[mask])
-ax2.plot(N_values[mask], ref, color='gray', linestyle='--', label='Référence en $1/\\sqrt{N}$')
+ax2.plot(N_values[mask], ref, color='gray', linestyle='--', label=r"Référence en $1/\\sqrt{N}$")
 
 ax2.set_xscale('log')
 ax2.set_yscale('log')
